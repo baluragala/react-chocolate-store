@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './List.css';
+import ListItem from './ListItem'
 
 class List extends Component {
 
@@ -27,12 +28,7 @@ class List extends Component {
 	];
 
 	var rows = choclates.map(function(row){
-			 return <tr>
-				 <td>{row.name}</td>
-				 <td>{row.brand}</td>
-				 <td>{row.size}</td>
-				  <td>{row.price}</td>
-			 </tr>
+			 return (<ListItem item={row} />)
  		})
 
   	return (
