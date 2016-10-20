@@ -9,6 +9,8 @@ class ListItem extends Component {
   		<td>{this.props.item.brand}</td>
   		<td>{this.props.item.size}</td>
   		<td>{this.props.item.price}</td>
+  		<td>{this.props.item.soh > 0 ? this.props.item.soh : "No Stock"}</td>
+  		
   	</tr>	
  }
 }

@@ -4,6 +4,11 @@ import ListItem from './ListItem'
 
 class List extends Component {
 
+
+  handleClick(){
+  	console.log('clicked...')
+  }
+
   render() {
 
   	let choclates=[
@@ -11,24 +16,27 @@ class List extends Component {
 		"name":"Diary Milk",
 		"brand" : "Cadbury",
 		"size" : "small",
-		"price" : "5"
+		"price" : "5",
+		"soh" : 10
 	},
 	{
 		"name":"5 Star",
 		"brand" : "Cadbury",
 		"size" : "small",
-		"price" : "5"
+		"price" : "5",
+		"soh" : 10
 	},
 	{
 		"name":"KitKat",
 		"brand" : "Nestle",
 		"size" : "small",
-		"price" : "8"
+		"price" : "8",
+		"soh" : 0
 	}
 	];
 
 	var rows = choclates.map(function(row){
-			 return (<ListItem item={row} />)
+			 return (<ListItem item={row}/>)
  		})
 
   	return (
@@ -38,6 +46,7 @@ class List extends Component {
   				<th>Brand</th>
   				<th>Size</th>
   				<th>Price</th>
+  				<th>Soh</th>
   			</thead>
   			{rows}
   		</table>
