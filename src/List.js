@@ -4,7 +4,7 @@ import ListItem from './ListItem'
 
 class List extends Component {
 
-
+  
   handleClick(){
   	console.log('clicked...')
   }
@@ -31,12 +31,12 @@ class List extends Component {
 		"brand" : "Nestle",
 		"size" : "small",
 		"price" : "8",
-		"soh" : 0
+		"soh" : 4
 	}
 	];
 
 	var rows = choclates.map(function(row){
-			 return (<ListItem item={row}/>)
+			 return (<ListItem item={row} title="Gift"/>)
  		})
 
   	return (
