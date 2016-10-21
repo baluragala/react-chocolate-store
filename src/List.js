@@ -4,15 +4,15 @@ import ListItem from './ListItem'
 
 class List extends Component {
 
-  
-  handleClick(){
-  	console.log('clicked...')
+  constructor(props) {
+  	super(props);
+  	this.state={}
+  	
   }
-
-  render() {
-
-  	let choclates=[
+componentWillMount(){
+  this.setState( { choclates :[
 	{
+		"id" : 1,
 		"name":"Diary Milk",
 		"brand" : "Cadbury",
 		"size" : "small",
@@ -20,6 +20,7 @@ class List extends Component {
 		"soh" : 10
 	},
 	{
+		"id" : 2,
 		"name":"5 Star",
 		"brand" : "Cadbury",
 		"size" : "small",
@@ -27,17 +28,31 @@ class List extends Component {
 		"soh" : 10
 	},
 	{
+		"id" : 3,	
 		"name":"KitKat",
 		"brand" : "Nestle",
 		"size" : "small",
 		"price" : "8",
 		"soh" : 4
 	}
-	];
+	]
+})
+}
 
-	var rows = choclates.map(function(row){
-			 return (<ListItem item={row} title="Gift"/>)
- 		})
+  handleClick(id){
+  	this.state.choclates.forEach(function(ele,index,arr){
+  		if(ele.id === id){
+  			ele.soh = ele.soh-1;  			
+  		}
+  	})
+  }
+
+  render() {
+  	
+
+	var rows = this.state.choclates.map(function(row){
+			 return (<ListItem key={row.id} item={row} title="Gift" handleClick={this.handleClick.bind(this,row.id)}/>)
+ 		},this)
 
   	return (
   		<table>

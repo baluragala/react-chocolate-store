@@ -14,6 +14,7 @@ class ListItem extends Component {
   		{this.props.item.soh > 0 ? <td>
   			<input type="button" 
   				   value={this.props.title}
+  				   onClick={this.props.handleClick}
   		    />
   		</td> : ""}
   		
