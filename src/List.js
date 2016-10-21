@@ -4,11 +4,6 @@ import ListItem from './ListItem'
 
 class List extends Component {
 
-  constructor(props) {
-  	super(props);
-  	this.state={}
-  	
-  }
 componentWillMount(){
   this.setState( { choclates :[
 	{
@@ -54,7 +49,7 @@ componentWillMount(){
   	
 
 	var rows = this.state.choclates.map(function(row){
-			 return (<ListItem key={row.id} item={row}  />)
+			 return (<ListItem key={row.id} item={row} title="Sell" handleClick={this.handleClick.bind(this,row.id)}/>)
  		},this)
 
   	return (
