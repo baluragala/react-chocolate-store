@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import './ListItem.css';
 
 class ListItem extends Component {
+
+  constructor(props) {
+    super(props);
+    
+  }
+
+  static propTypes = {
+    item : React.PropTypes.object.isRequired,
+    handleClick : React.PropTypes.func.isRequired,
+    title : React.PropTypes.string.isRequired
+    }
+  
   
   render(){
   	

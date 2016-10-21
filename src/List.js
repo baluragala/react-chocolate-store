@@ -40,30 +40,37 @@ componentWillMount(){
 }
 
   handleClick(id){
-  	this.state.choclates.forEach(function(ele,index,arr){
+    var choclates=[]
+  	this.state.choclates.forEach((ele,index,arr) => {
   		if(ele.id === id){
-  			ele.soh = ele.soh-1;  			
+  			ele.soh -= 1;  			
   		}
+      choclates.push(ele)
   	})
+    this.setState({choclates})
   }
 
   render() {
   	
 
 	var rows = this.state.choclates.map(function(row){
-			 return (<ListItem key={row.id} item={row} title="Gift" handleClick={this.handleClick.bind(this,row.id)}/>)
+			 return (<ListItem key={row.id} item={row}  />)
  		},this)
 
   	return (
   		<table>
-  			<thead>
+        <thead>
+  			 <tr>
   				<th>Name</th>
   				<th>Brand</th>
   				<th>Size</th>
   				<th>Price</th>
   				<th>Soh</th>
-  			</thead>
+  			</tr>
+        </thead>
+        <tbody>
   			{rows}
+        </tbody>
   		</table>
   	
   	);
