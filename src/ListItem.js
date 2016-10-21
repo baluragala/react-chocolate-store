@@ -14,7 +14,33 @@ class ListItem extends Component {
       title : "Gift"
   }
 
+  componentWillMount(){
+    console.log('componentWillMount');
+  }
+
+  componentDidMount(){
+    console.log('componentDidMount');
+  }
+   
+  componentWillReceiveProps(nextProps){
+    console.log('componentWillReceiveProps');
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('shouldComponentUpdate');
+    return true;
+  }
+
+  componentWillUpdate(){
+    console.log('componentWillUpdate');
+  }
+
+  componentWillUnmount(){
+    console.log('componentWillUnmount')
+  }  
+
   render(){
+    
   	
   	return <tr>
   		<td>{this.props.item.name}</td>
