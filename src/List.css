@@ -1,16 +1,14 @@
 table {
-	width: 100%;
-	padding: 10px;
-	
+  width: 100%;
+  padding: 10px;
 }
 
 td {
-	border: 1px solid brown
+  border: 1px solid brown;
 }
 
 th {
-	font-weight: bolder;
-	font-size: 22;
-	color: brown;
+  font-weight: bolder;
+  font-size: 22;
+  color: brown;
 }
-	
