@@ -1,14 +1,23 @@
 table {
-  width: 100%;
+  width: 95%;
   padding: 10px;
+  margin: 15px auto;
 }
 
 td {
   border: 1px solid brown;
+  height: 30px;
 }
 
 th {
+  background-color: wheat;
   font-weight: bolder;
-  font-size: 22;
+  font-size: 25px;
   color: brown;
+}
+
+.chakolate-store-tbl {
+  border-collapse: collapse;
+}
+.chakolate-store-tb1-thead {
 }
